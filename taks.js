@@ -74,15 +74,13 @@ console.log(new_place);
 // Task-5:
 // Capitalize Every first Letter of each word in a String
 
-// const sentence = "amar desher nam bangladesh";
-// new_sentence = sentence.split(" ");
-// console.log(new_sentence);
-// let capitalized = [];
+const sentence = "amar desher nam bangladesh";
+new_sentence = sentence.split(" ");
+console.log(new_sentence);
+let capitalized = "";
 
-// for (const word of new_sentence) {
-//   const capital = word[0].toUpperCase();
-//   capitalized = capitalized.push(capital);
-// }
-// console.log(capitalized);
-
-//
+for (const word of new_sentence) {
+  const capital = word[0].toUpperCase() + word.slice(1);
+  capitalized = capitalized + " " + capital;
+}
+console.log(capitalized);
