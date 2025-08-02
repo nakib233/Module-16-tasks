@@ -81,6 +81,54 @@ let capitalized = "";
 
 for (const word of new_sentence) {
   const capital = word[0].toUpperCase() + word.slice(1);
+  console.log(typeof capital);
   capitalized = capitalized + " " + capital;
 }
 console.log(capitalized);
+
+// String to Array of Words
+// let name = "  Robin Singh   ";
+// console.log(name.trim().split(" "));
+
+// 4. Extract Characters
+// Write a JavaScript function to extract a specified number of characters from a string.
+
+let name = "  Robin Singh  ";
+
+sliced_part = name.trim().slice(0, 4);
+console.log(sliced_part);
+
+// Alternative Solution
+
+truncate_string = function (str1, length) {
+  if (str1.constructor === String && length > 0) {
+    return str1.slice(0, length);
+  }
+};
+console.log(truncate_string("Nakibul Hasan", 7));
+
+// Random Problem
+const paragraph = "I think Ruth's dog is cuter than your dog.";
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first ${searchTerm} is ${indexOfFirst}`);
+console.log(
+  `The index of the second ${searchTerm} is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1
+  )}`
+);
+
+// 5. Abbreviate Name
+
+// Write a JavaScript function to convert a string into abbreviated form.
+
+abbrev_name = function (str) {
+  let abbreviated_name = "";
+  splitted_name = str.split(" ");
+  console.log(splitted_name[1]);
+  abbreviated_name = splitted_name[1][0].toUpperCase() + ".";
+  return `${splitted_name[0]} ${abbreviated_name}`;
+};
+console.log(abbrev_name("Robin Singh"));
