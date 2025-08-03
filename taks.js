@@ -132,3 +132,11 @@ abbrev_name = function (str) {
   return `${splitted_name[0]} ${abbreviated_name}`;
 };
 console.log(abbrev_name("Robin Singh"));
+//  --> Output: Robin S.
+
+let str1 = "Hello World";
+let new_str = str1.replace("World", "Javascript");
+console.log(new_str);
+
+// 2. What is the purpose of the charAt() method in JavaScript?
+// The charAt() method returns the character at a specified index in a string. For example:
